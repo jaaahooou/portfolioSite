@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/description-animation.css">
+    <link rel="stylesheet" href="/css/stylingClasses.css">
+    <link rel="stylesheet" href="/css/contact.css">
+
+
+    <link rel="stylesheet" media="screen and (max-width: 767px)" href="/css/menu-max-767.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="/css/menu768.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="/css/main_768.css">
+    <script src="https://kit.fontawesome.com/988bfffea1.js" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+    </style>
+
+
+    <title>Document</title>
+</head>
+
+<body class="body">
+    <div class="main-wrapper">
+        <section class="contact hidden">
+            <form action="">
+                <label for="fname">Name: </label><br>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="fname">Company: </label><br>
+                <input type="text" id="company" name="company"><br><br>
+                <label for="fname">Email: </label><br>
+                <input type="text" id="email" name="email"><br><br>
+                <label for="fname">Message: </label><br>
+                <textarea id="message" name="message"></textarea><br><br>
+            </form>
+            <button class="send-message">Send</button>
+        </section>
+        <div class="menu-wrapper green-font hidden">
+            <div class="menu-element close-menu-element main-menu-element"><i class="fa-solid fa-xmark"></i></div>
+            <div class="menu-element-small top-menu-element phone hidden"><i class="fa-solid fa-phone"></i></div>
+            <div class="menu-element-small left-menu-element github hidden"><i class="fa-brands fa-github"></i></div>
+            <div class="menu-element-small right-menu-element envelope hidden"><i class="fa-regular fa-envelope"></i></div>
+        </div>
+
+
+        <header class="header-wrapper">
+            <div class="burger burger-right"> <i class="fa-brands fa-github"></i></div>
+            <div class="burger burger-left"><i class="fa-regular fa-chart-bar"></i></div>
+        </header>
+        <div class="header-blur"></div>
+        <div class="content-wrapper">
+
+            <section class="main-content-wrapper">
+                <main class="describe main-describe">
+                    <div class="describe-right-border">
+                        <div class="introduce-avatar-wrapper">
+                            <div class="introduce-wrapper">
+                                <h1 class="gru">
+                                    <span class="introduce"> <p class = "introduce">hi!</p></span>
+                                    <span class="introduce green-font"> <p class = "introduce">i`m Jack</p></span>
+                                    <span class="introduce"> <p class = "introduce">webDeveloper</p></span>
+                                </h1>
+                            </div>
+
+
+                            <div class="avatar"></div>
+
+                        </div>
+
+                        <p class="description">
+                            My name is Jacek. I`m web developer based in
+                            <span class="green-font">Poland</span>, building the Frontend and Backend of Websites and Web Applications.
+                        </p>
+                        <div class="down-arrow-wrapper">
+                            <div class="down-arrow">
+                                <div class="scroll-down-wrapper"><span class="scroll-down">scroll down</span><i class="fa-solid fa-chevron-down down-arrow-awesome"></i></div>
+                                <div class="scroll-down-wrapper"><span class="scroll-down">scroll down</span><i class="fa-solid fa-chevron-down down-arrow-awesome"></i></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </main>
+                <main class="describe animated-describe describe-1">
+                    <div class="describe-left-border small-font">
+                        <p class="medium-font"><span class="green-font">01.</span>Me:</p>
+                        <p class="description small-font">Student of computer science interested in new technologies, programming and vintage computers. </p>
+                        <p class="description small-font">Well-organized person with high attention to details</p>
+                        <p class="description small-font">Fan of climbing and mountains itself, fantasy literature and gaming </p>
+                    </div>
+                </main>
+                <main class="describe animated-describe describe-2">
+                    <div class="describe-right-border">
+                        <p class="medium-font"><span class="green-font">02.</span>Frontend technologies:</p>
+                        <p class="description small-font"><span class="green-font">Javascript</span>> - because it`s powerful script language used in front and back of applications </p>
+                        <p class="description small-font"><span class="green-font">React</span>> - because it`s powerful script language used in front and back of applications </p>
+                        <p class="description small-font"><span class="green-font">Redux</span>> - because it`s powerful script language used in front and back of applications </p>
+                        <p class="description small-font"><span class="green-font">Bootstrap</span>> - because it`s powerful script language used in front and back of applications </p>
+
+                    </div>
+                </main>
+                <main class="describe animated-describe describe-3">
+                    <div class="describe-left-border">
+                        <p class="medium-font"><span class="green-font">03.</span>Backend technologies:</p>
+                        <p class="description small-font"><span class="green-font">Python</span>> - because it`s powerful script language used in front and back of applications </p>
+                        <p class="description small-font"><span class="green-font">Django</span>> - because it`s powerful script language used in front and back of applications </p>
+                        <p class="description small-font"><span class="green-font">Rest</span>> - because it`s powerful script language used in front and back of applications </p>
+
+                    </div>
+                </main>
+
+                <section class="portfolio-projects">
+                    <div class="button-wrapper">
+                        <button class="project_button active-project_button">project 1</button>
+                        <button class="project_button">project 2</button>
+                        <button class="project_button">project 3</button>
+                        <button class="project_button">project 4</button>
+                    </div>
+                    <section class="project-elements-wrapper">
+                        <div class="project_element commerce active-project-element"></div>
+                        <div class="project-element__bottom commerce__bottom active-project-element__bottom">1</div>
+                        <div class="project_element chat"></div>
+                        <div class="project-element__bottom chat__bottom">2</div>
+                        <div class="project_element restaurant"></div>
+                        <div class="project-element__bottom restaurant__bottom">3</div>
+                        <div class="project_element stones"></div>
+                        <div class="project-element__bottom stones__bottom">4</div>
+                    </section>
+
+
+                </section>
+                <!-- <main class="describe animated-describe describe-4">
+                    <div class="describe-right-border">
+                        <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley o</p>
+                    </div>
+                </main> -->
+            </section>
+
+            <footer class="footer">jacek pilch 2022</footer>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

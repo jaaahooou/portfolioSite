@@ -1,0 +1,8 @@
+.down-arrow-wrapper {
+    display: none;
+}
+
+.introduce-avatar-wrapper {
+    display: flex;
+    justify-content: space-between;
+}

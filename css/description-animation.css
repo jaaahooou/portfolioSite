@@ -1,0 +1,137 @@
+@font-face {
+    font-family: sono;
+    src: url(/fonts/sono/Sono-VariableFont_MONO.ttf);
+}
+
+
+/* ============  DESCRIBE ============ */
+
+.describe {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.describe-right-border,
+.describe-left-border {
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    color: darkgrey;
+    margin: auto;
+    font-family: 'sono';
+}
+
+.description {
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+.describe {
+    width: 85vw;
+}
+
+.main-describe {
+    width: 100%;
+    height: 500px;
+}
+
+.describe-1,
+.describe-3,
+.describe-2,
+.describe-4 {
+    border-radius: 20px;
+    height: 450px;
+    margin-bottom: 30px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.describe-1,
+.describe-3 {
+    left: -100vw;
+    transition: left 1s;
+    -webkit-transition: left 1s;
+    -moz-transition: left 1s;
+    -ms-transition: left 1s;
+    -o-transition: left 1s;
+}
+
+.describe-1 {
+    height: 350px;
+}
+
+.describe-2,
+.describe-4 {
+    left: 100vw;
+    transition: left 1s;
+    -webkit-transition: left 1s;
+    -moz-transition: left 1s;
+    -ms-transition: left 1s;
+    -o-transition: left 1s;
+}
+
+.describe-transition {
+    left: 0;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.gru {
+    padding-left: 15px;
+}
+
+.down-arrow-wrapper {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.down-arrow {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    justify-content: space-between;
+    animation: down-arrow-bounce 2s infinite;
+    -webkit-animation: down-arrow-bounce 2s infinite;
+}
+
+.scroll-down {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.scroll-down-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.down-arrow-awesome {
+    margin-top: 10px;
+}
+
+.color-white {
+    color: white;
+}
+
+.fa-chevron-down:before {
+    filter: drop-shadow(5px red);
+    -webkit-filter: drop-shadow(5px red);
+}
+
+@keyframes down-arrow-bounce {
+    0% {
+        top: 0
+    }
+    50% {
+        top: 20px
+    }
+    100% {
+        top: 0
+    }
+}
