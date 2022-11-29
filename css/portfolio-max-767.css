@@ -85,17 +85,62 @@
 .project_element {
     position: absolute;
     width: 100%;
-    height: 90%;
+    height: 85%;
     background-color: grey;
     margin: auto;
 }
 
 .project-element__bottom {
+    margin-top: 5px;
     position: absolute;
+    display: flex;
     height: 10%;
     width: 100%;
-    background-color: #fff;
+    border-bottom: 1px solid var(--green);
     bottom: 0;
+}
+
+.javascript,
+.python,
+.react,
+.redux,
+.django,
+.bootstrap {
+    margin-right: 10px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 36px;
+    height: 36px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.javascript {
+    background-image: url('../img/svg/logo-javascript.svg');
+}
+
+.python {
+    background-image: url('../img/svg/python.svg');
+}
+
+.react {
+    background-image: url('../img/svg/react-2.svg');
+}
+
+.redux {
+    background-image: url('../img/svg/redux.svg');
+}
+
+.django {
+    background-image: url('../img/svg/django.svg');
+    background-size: 80%;
+}
+
+.bootstrap {
+    background-image: url('../img/svg/bootstrap-4.svg');
 }
 
 .commerce,
