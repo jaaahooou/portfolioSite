@@ -86,8 +86,42 @@
     position: absolute;
     width: 100%;
     height: 85%;
-    background-color: grey;
     margin: auto;
+}
+
+.commerce,
+.chat,
+.restaurant,
+.stones {
+    background-size: cover;
+    left: -100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-element-top-container,
+.project-element-bottom-container {
+    height: 50%;
+    width: 100%;
+}
+
+.project-element-top-container {
+    display: flex;
+}
+
+.top-left-container,
+.top-right-container {
+    height: 100%;
+    width: 50%;
+}
+
+.top-left-container {
+    background-size: cover;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 .project-element__bottom {
@@ -148,22 +182,24 @@
 .restaurant,
 .stones {
     background-size: cover;
-    left: -100vw
+    left: -100vw;
+    display: flex;
+    flex-direction: column;
 }
 
-.commerce {
+.commerce-bg {
     background-image: url('../img/Online-shop_button.jpg');
 }
 
-.chat {
+.chat-bg {
     background-image: url('../img/chat.jpg');
 }
 
-.restaurant {
+.restaurant-bg {
     background-image: url('../img/restaurant.jpg');
 }
 
-.stones {
+.stones-bg {
     background-image: url('../img/stones.jpg');
 }
 

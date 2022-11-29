@@ -37,6 +37,10 @@
     color: var(--green);
 }
 
+.grey-font {
+    color: var(--slate);
+}
+
 .small-font {
     font-size: 1rem
 }
