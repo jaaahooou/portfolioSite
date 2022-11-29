@@ -102,7 +102,7 @@
 .project-element-top-container,
 .project-element-bottom-container {
     height: 50%;
-    width: 100%;
+    width: 95%;
 }
 
 .project-element-top-container {
@@ -122,6 +122,20 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+}
+
+.top-right-container {
+    box-sizing: border-box;
+    padding-left: 20px;
+    width: calc(50% - 20px);
+}
+
+.top-right-container span {
+    margin-right: 10px
+}
+
+.project-element-bottom-container {
+    padding-top: 10px;
 }
 
 .project-element__bottom {
