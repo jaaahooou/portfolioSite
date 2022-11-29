@@ -180,6 +180,8 @@ projectButtonsArray.forEach((item, index) => {
                 projectElementsArray[0].classList.remove('active-project-element')
                 projectElementBottomArray[0].classList.remove('active-project-element__bottom')
             }, 600)
+
+
             projectElementsArray[activeProjectElement].classList.add('project_element_disappear')
             projectElementBottomArray[activeProjectElement].classList.add('project_element_bottom_disappear')
 
@@ -188,10 +190,11 @@ projectButtonsArray.forEach((item, index) => {
 
             projectElementsArray[index].classList.add('project_element_appear')
             projectElementBottomArray[index].classList.add('project_element_bottom_appear')
-            projectElementsArray[index].classList.remove('hidden')
+                // projectElementsArray[index].classList.remove('hidden')
 
 
             activeProjectElement = index
+            projectElementBottomArray[activeProjectElement].classList.remove('project_element_bottom_disappear')
         }
 
 
