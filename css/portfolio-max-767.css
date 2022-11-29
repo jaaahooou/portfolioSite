@@ -107,19 +107,19 @@
 }
 
 .commerce {
-    background-image: url('/img/Online-shop_button.jpg');
+    background-image: url('../img/Online-shop_button.jpg');
 }
 
 .chat {
-    background-image: url('/img/chat.jpg');
+    background-image: url('../img/chat.jpg');
 }
 
 .restaurant {
-    background-image: url('/img/restaurant.jpg');
+    background-image: url('../img/restaurant.jpg');
 }
 
 .stones {
-    background-image: url('/img/stones.jpg');
+    background-image: url('../img/stones.jpg');
 }
 
 .project_element_disappear {
