@@ -1,91 +1,50 @@
-/* :root {
-    --bardDarkBlue: rgb(4, 28, 50);
-    --darkblue: #04293A;
-    --lighterBlue: #064663;
-    --yellow: rgb(236, 179, 101);
-} */
+@font-face {
+    font-family: sono;
+    src: url(/fonts/sono/Sono-VariableFont_MONO.ttf);
+}
 
 :root {
     --bardDarkBlue: rgb(4, 28, 50);
     --darkblue: #04293A;
     --lighterBlue: #0D19AB;
     --yellow: rgb(236, 179, 101);
+    --green: #15DB95;
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2, 12, 27, 0.7);
+    --dark-slate: #495670;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green: #64ffda;
+    --green-tint: rgba(100, 255, 218, 0.1);
+    --pink: #f57dff;
+    --blue: #57cbff;
 }
 
+.header-wrapper,
 .menu-wrapper {
+    display: none;
+}
+
+.header-wrapper-medium {
     position: fixed;
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    color: floralwhite;
-    height: 300px;
-    width: 56px;
-    top: 50vh;
-    transform: translate(0, -50%);
-    right: -80px;
-    margin-right: 16px;
-    background-color: rgba(4, 28, 50, 0.5);
-    border-radius: 10px;
-    z-index: 6;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    -webkit-transform: translate(0, -50%);
-    -moz-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    -o-transform: translate(0, -50%);
+    justify-content: space-around;
+    z-index: 5;
 }
 
-
-/* =========== MENU ELEMENTS =========== */
-
-.menu-element,
-.menu-element-small {
-    height: 40px;
-    font-size: 40px;
-    margin: auto;
+.header-wrapper-medium-element {
+    width: 25vw;
 }
 
-
-/* =========== OPEN ANIMATIONS  =========== */
-
-.menu-animation {
-    animation: menu-element-animation 0.5s;
-    -webkit-animation: menu-element-animation 0.5s;
-    animation-fill-mode: forwards;
+.header-wrapper-medium-element span {
+    border-right: 1px solid var(--green);
 }
 
-@keyframes menu-element-animation {
-    0% {}
-    100% {
-        right: 0;
-    }
-}
-
-.introduce {
-    display: block;
-    padding: 0;
-    margin: 0;
-    line-height: 100%;
-    font-size: 3.5rem;
-    color: #15DB95;
-}
-
-
-/* =========== CLOSE ANIMATIONS =========== */
-
-.close-menu-after-envelope-clicked {
-    animation: envelope-clicked 0.5s;
-    animation-fill-mode: forwards;
-    -webkit-animation: envelope-clicked 0.5s;
-}
-
-@keyframes envelope-clicked {
-    0% {
-        right: 0
-    }
-    100% {
-        right: -80px
-    }
+.header-blur {
+    overflow-y: hidden;
 }

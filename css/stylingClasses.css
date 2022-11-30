@@ -41,6 +41,10 @@
     color: var(--slate);
 }
 
+.pink-font {
+    color: var(--pink)
+}
+
 .small-font {
     font-size: 1rem
 }

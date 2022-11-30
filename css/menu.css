@@ -41,6 +41,7 @@
     height: 72px;
     z-index: 3;
     backdrop-filter: blur(10px);
+    overflow-y: hidden;
 }
 
 .burger {
