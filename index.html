@@ -8,16 +8,22 @@
 
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/menu.css">
-    <link rel="stylesheet" href="./css/description-animation.css">
+
     <link rel="stylesheet" href="./css/stylingClasses.css">
     <link rel="stylesheet" href="./css/contact.css">
 
-
+    <link rel="stylesheet" media="screen and (max-width: 767px)" href="./css/description-animation.css">
     <link rel="stylesheet" media="screen and (max-width: 767px)" href="./css/menu-max-767.css">
     <link rel="stylesheet" media="screen and (max-width: 767px)" href="./css/portfolio-max-767.css">
+    <link rel="stylesheet" media="screen and (max-width: 767px)" href="./css/main-max-767.css">
 
     <link rel="stylesheet" media="screen and (min-width: 768px)" href="./css/menu768.css">
     <link rel="stylesheet" media="screen and (min-width: 768px)" href="./css/main_768.css">
+    <link rel="stylesheet" media="screen and (min-width: 767px)" href="./css/description-animation-768.css">
+
+    <link rel="stylesheet" media="screen and (width: 768px) and (height: 1024px)" href="./css/tablets/main-768x1024.css">
+
+
     <script src="https://kit.fontawesome.com/988bfffea1.js" crossorigin="anonymous"></script>
 
     <style>
@@ -29,6 +35,7 @@
 </head>
 
 <body class="body">
+    <div class="wrong-resolution">move your device to horizontal position</div>
     <div class="main-wrapper">
         <section class="contact hidden">
             <form action="">
@@ -57,7 +64,7 @@
         </header>
         <header class="header-wrapper-medium slate-font">
             <div class="header-wrapper-medium-element">
-                <p class="small-font"><span class="green-font">01</span>Me</p>
+                <p class="small-font"><span class="green-font">01</span>About me</p>
             </div>
             <div class="header-wrapper-medium-element">
                 <p class="small-font"><span class="green-font">02</span>Frontend technologies</p>
@@ -67,6 +74,14 @@
             </div>
             <div class="header-wrapper-medium-element">
                 <p class="small-font"><span class="green-font">04</span>Projects</p>
+            </div>
+            <div class="contact-wrapper green-font">
+                <div class="contact-icons-wrapper">
+                    <div class="medium-menu-element big-font"><i class="fa-solid fa-phone"></i></div>
+                    <div class="medium-menu-element big-font"><i class="fa-brands fa-github"></i></div>
+                    <div class="medium-menu-element big-font"><i class="fa-regular fa-envelope"></i></div>
+                </div>
+
             </div>
         </header>
         <div class="header-blur blur-content slate-font">Lorem ipsum dolor sit amet consectetur, adipisici<span class="green-font"> Impedit facere et reprehenderit tot</span>ng elit. Impedit facere et repr<span class="green-font"> Impedit facere et reprehenderit tot</span><span class="pink-font"> Impedit facere et reprehenderit tot</span>s
@@ -81,10 +96,11 @@
                             <div class="introduce-wrapper">
                                 <h1 class="gru">
                                     <span class="introduce"> <p class = "introduce">hi!</p></span>
-                                    <span class="introduce green-font"> <p class = "introduce">i`m Jack</p></span>
+                                    <span class="introduce introduce-shadow green-font"> <p class = "introduce">i`m Jack</p></span>
                                     <span class="introduce"> <p class = "introduce">webDeveloper</p></span>
                                 </h1>
                             </div>
+                            <div class="worldmap"></div>
 
 
                             <div class="avatar"></div>
@@ -105,15 +121,16 @@
                     </div>
 
                 </main>
-                <main class="describe animated-describe describe-1">
+                <main class="describe animated-describe describe-1 medium-content-element">
                     <div class="describe-left-border small-font">
                         <p class="medium-font"><span class="green-font">01.</span>Me:</p>
                         <p class="description small-font">Student of computer science interested in new technologies, programming and vintage computers. </p>
                         <p class="description small-font">Well-organized person with high attention to details</p>
                         <p class="description small-font">Fan of climbing and mountains itself, fantasy literature and gaming </p>
                     </div>
+                    <div class="medium-avatar"></div>
                 </main>
-                <main class="describe animated-describe describe-2">
+                <main class="describe animated-describe describe-2 medium-content-element">
                     <div class="describe-right-border">
                         <p class="medium-font"><span class="green-font">02.</span>Frontend technologies:</p>
                         <p class="description small-font"><span class="green-font">Javascript</span>> - because it`s powerful script language used in front and back of applications </p>
@@ -123,7 +140,7 @@
 
                     </div>
                 </main>
-                <main class="describe animated-describe describe-3">
+                <main class="describe animated-describe describe-3 medium-content-element">
                     <div class="describe-left-border">
                         <p class="medium-font"><span class="green-font">03.</span>Backend technologies:</p>
                         <p class="description small-font"><span class="green-font">Python</span>> - because it`s powerful script language used in front and back of applications </p>
@@ -133,7 +150,7 @@
                     </div>
                 </main>
 
-                <section class="portfolio-projects">
+                <section class="portfolio-projects medium-content-element">
                     <div class="button-wrapper">
                         <button class="project_button active-project_button">project 1</button>
                         <button class="project_button">project 2</button>
@@ -210,10 +227,13 @@
 
             </section>
 
+
+
             <footer class="footer">jacek pilch 2022</footer>
         </div>
 
     </div>
+
     <script src="./js/main.js"></script>
 </body>
 

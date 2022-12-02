@@ -9,7 +9,8 @@
 /* ===============reset================ */
 
 .header-wrapper-medium,
-.header-wrapper-medium-element {
+.header-wrapper-medium-element,
+.contact-wrapper {
     display: none;
 }
 

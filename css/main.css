@@ -25,6 +25,11 @@
     --blue: #57cbff;
 }
 
+.wrong-resolution,
+.medium-avatar {
+    display: none
+}
+
 body {
     margin: 0;
     padding: 0;

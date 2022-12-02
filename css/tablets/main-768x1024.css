@@ -1,0 +1,26 @@
+/* .content-wrapper {
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.introduce-avatar-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.worldmap {
+    margin: auto;
+} */
+
+.main-wrapper {
+    display: none
+}
+
+.wrong-resolution {
+    position: relative;
+    display: block;
+    color: white;
+    font-size: 4rem;
+    top: 40vh;
+    margin: 10px;
+}

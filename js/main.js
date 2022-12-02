@@ -13,6 +13,7 @@ const body = document.querySelector('.body')
 
 
 
+
 const smallMenuElements = document.querySelectorAll('.menu-element-small')
 
 
@@ -199,4 +200,20 @@ projectButtonsArray.forEach((item, index) => {
 
 
     })
+})
+
+
+
+// ============== Menu elements for width resolutions >= 768px ============
+
+const headerWrapperMediumElementsArray = [...document.querySelectorAll('.header-wrapper-medium-element')]
+const mediumContentElementsArray = [...document.querySelectorAll('.medium-content-element')]
+
+
+headerWrapperMediumElementsArray.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        console.log("menu el index: ", index);
+        console.log(mediumContentElementsArray[index]);
+    })
+
 })

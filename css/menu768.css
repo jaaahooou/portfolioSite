@@ -38,7 +38,8 @@
 }
 
 .header-wrapper-medium-element {
-    width: 25vw;
+    width: 15vw;
+    padding-left: 20px;
 }
 
 .header-wrapper-medium-element span {
@@ -47,4 +48,21 @@
 
 .header-blur {
     overflow-y: hidden;
+}
+
+.contact-wrapper,
+.contact-icons-wrapper {
+    width: calc(40vw - 80px);
+}
+
+.contact-icons-wrapper {
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+}
+
+.medium-menu-element {
+    line-height: 72px;
+    margin-left: 10px;
+    margin-right: 10px;
 }

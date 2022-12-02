@@ -6,3 +6,70 @@
     display: flex;
     justify-content: space-between;
 }
+
+.gru {
+    font-size: 2rem
+}
+
+.content-wrapper {
+    position: absolute;
+    height: calc(100vh - 82px);
+    overflow: hidden;
+}
+
+.introduce {
+    font-family: roboto;
+    font-size: 4rem;
+    line-height: 2rem;
+}
+
+.introduce-shadow {
+    text-shadow: 3px 3px 0px #ff018c;
+}
+
+.introduce-wrapper,
+.description {
+    margin-left: 40px
+}
+
+.worldmap {
+    background-image: url('../img/world.svg');
+    height: 400px;
+    width: 600px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.avatar {
+    display: none;
+}
+
+.medium-content-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.describe-1 {
+    display: flex;
+}
+
+.describe-2,
+.describe-3,
+.portfolio-projects,
+.main-describe {
+    display: none
+}
+
+.medium-avatar {
+    position: relative;
+    display: block;
+    height: 300px;
+    width: 300px;
+    /* background-color: #fff; */
+    background-image: url('../img/escalade.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
