@@ -14,21 +14,17 @@
 
 .describe-right-border,
 .describe-left-border {
+    margin-top: 0;
     height: 300px;
     width: 100%;
     color: darkgrey;
-    margin: 30px;
+    /* margin: 30px 0 0 0 ; */
     font-family: 'sono';
 }
 
 .description {
     padding-right: 15px;
     padding-left: 15px;
-    font-size: 20px;
-}
-
-.describe {
-    width: 85vw;
 }
 
 .main-describe {

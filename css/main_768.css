@@ -54,8 +54,17 @@
 
 .describe-1 {
     display: flex;
-    flex-direction: column;
-    height: calc(100vh - 72px);
+    flex-direction: row;
+    height: 400px;
+    margin: auto;
+    width: 100%;
+}
+
+.describe-1-right-element,
+.describe-1-left-element {
+    width: 50%;
+    position: relative;
+    width: 40%;
 }
 
 .describe-2,
@@ -74,5 +83,8 @@
     background-image: url('../img/Mountain.svg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: -150px -250px;
+}
+
+.main-content-wrapper {
+    height: 100%;
 }
