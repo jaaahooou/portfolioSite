@@ -54,6 +54,8 @@
 
 .describe-1 {
     display: flex;
+    flex-direction: column;
+    height: calc(100vh - 72px);
 }
 
 .describe-2,
@@ -66,10 +68,11 @@
 .medium-avatar {
     position: relative;
     display: block;
-    height: 300px;
-    width: 300px;
-    /* background-color: #fff; */
-    background-image: url('../img/escalade.svg');
-    background-size: 100%;
+    height: 400px;
+    width: 100%;
+    color: #ffffff;
+    background-image: url('../img/Mountain.svg');
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: -150px -250px;
 }

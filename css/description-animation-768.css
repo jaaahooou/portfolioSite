@@ -41,7 +41,6 @@
 .describe-2,
 .describe-4 {
     border-radius: 20px;
-    height: 450px;
     margin-bottom: 30px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -59,10 +58,6 @@
     -ms-transition: left 1s;
     -o-transition: left 1s;
 } */
-
-.describe-1 {
-    height: 350px;
-}
 
 .describe-2,
 .describe-4 {
