@@ -42,6 +42,10 @@
     padding-left: 20px;
 }
 
+.header-wrapper-medium-element-first {
+    width: 5vw;
+}
+
 .header-wrapper-medium-element span {
     border-right: 1px solid var(--green);
 }
@@ -52,7 +56,7 @@
 
 .contact-wrapper,
 .contact-icons-wrapper {
-    width: calc(40vw - 80px);
+    width: calc(35vw - 100px);
 }
 
 .contact-icons-wrapper {

@@ -67,10 +67,7 @@
     width: 40%;
 }
 
-.describe-2,
-.describe-3,
-.portfolio-projects,
-.main-describe {
+.no-display-768 {
     display: none
 }
 

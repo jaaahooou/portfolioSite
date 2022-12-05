@@ -1,5 +1,6 @@
 .menu-medium,
 .worldmap,
-.pilch {
+.pilch,
+.hidden-in-mobile {
     display: none;
 }

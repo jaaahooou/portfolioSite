@@ -208,12 +208,20 @@ projectButtonsArray.forEach((item, index) => {
 
 const headerWrapperMediumElementsArray = [...document.querySelectorAll('.header-wrapper-medium-element')]
 const mediumContentElementsArray = [...document.querySelectorAll('.medium-content-element')]
-
+let activeMediumContentElement = 0
 
 headerWrapperMediumElementsArray.forEach((item, index) => {
     item.addEventListener('click', () => {
         console.log("menu el index: ", index);
-        console.log(mediumContentElementsArray[index]);
+
+
+        for (let i = 0; i < mediumContentElementsArray.length; i++) {
+            if (!mediumContentElementsArray[i].classList.contains('no-display-768')) {
+                mediumContentElementsArray[i].classList.add('no-display-768')
+            }
+
+        }
+        mediumContentElementsArray[index].classList.remove('no-display-768')
     })
 
 })
