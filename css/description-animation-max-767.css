@@ -8,17 +8,7 @@
 
 .describe {
     position: relative;
-    width: 100%;
-    height: 300px;
-}
-
-.describe-right-border,
-.describe-left-border {
-    position: absolute;
-    height: 300px;
-    width: 100%;
     color: darkgrey;
-    margin: auto;
     font-family: 'sono';
 }
 
@@ -39,15 +29,8 @@
 
 .describe-1,
 .describe-3,
-.describe-2,
-.describe-4 {
-    border-radius: 20px;
-    height: 450px;
+.describe-2 {
     margin-bottom: 30px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
 }
 
 .describe-1,
@@ -60,12 +43,7 @@
     -o-transition: left 1s;
 }
 
-.describe-1 {
-    height: 500px;
-}
-
-.describe-2,
-.describe-4 {
+.describe-2 {
     left: 100vw;
     transition: left 1s;
     -webkit-transition: left 1s;
@@ -83,6 +61,9 @@
 .gru {
     padding-left: 15px;
 }
+
+
+/* =================  down arrows =========== */
 
 .down-arrow-wrapper {
     position: relative;

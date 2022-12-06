@@ -6,27 +6,6 @@
 
 /* ============  DESCRIBE ============ */
 
-
-/* .describe {
-    width: 100%;
-    height: 300px;
-} */
-
-.describe-right-border,
-.describe-left-border {
-    margin-top: 0;
-    height: 300px;
-    width: 100%;
-    color: darkgrey;
-    /* margin: 30px 0 0 0 ; */
-    font-family: 'sono';
-}
-
-.description {
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
 .main-describe {
     width: 100%;
     height: 500px;
@@ -43,34 +22,6 @@
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
 }
-
-
-/* .describe-1,
-.describe-3 {
-    left: -100vw;
-    transition: left 1s;
-    -webkit-transition: left 1s;
-    -moz-transition: left 1s;
-    -ms-transition: left 1s;
-    -o-transition: left 1s;
-} */
-
-
-/* .describe-2,
-.describe-4 {
-    left: 100vw;
-    transition: left 1s;
-    -webkit-transition: left 1s;
-    -moz-transition: left 1s;
-    -ms-transition: left 1s;
-    -o-transition: left 1s;
-}
-
-.describe-transition {
-    left: 0;
-    margin: auto;
-    margin-top: 30px;
-} */
 
 .gru {
     padding-left: 15px;

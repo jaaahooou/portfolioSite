@@ -1,3 +1,62 @@
+@font-face {
+    font-family: sono;
+    src: url(/fonts/sono/Sono-VariableFont_MONO.ttf);
+}
+
+:root {
+    --bardDarkBlue: rgb(4, 28, 50);
+    --darkblue: #04293A;
+    --lighterBlue: #0D19AB;
+    --yellow: rgb(236, 179, 101);
+    --green: #15DB95;
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2, 12, 27, 0.7);
+    --dark-slate: #495670;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green: #64ffda;
+    --green-tint: rgba(100, 255, 218, 0.1);
+    --pink: #f57dff;
+    --blue: #57cbff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--slate);
+    background-color: var(--navy);
+    overflow-x: hidden;
+    font-family: 'sono'
+}
+
+.wrong-resolution {
+    display: none
+}
+
+.content-wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 22px);
+    top: 82px;
+    margin-left: 11px;
+    margin-right: 11px;
+    background-color: var(--navy);
+    z-index: 2;
+    overflow-x: hidden;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
 .down-arrow-wrapper {
     display: none;
 }
@@ -52,19 +111,144 @@
     right: 0;
 }
 
-.describe-1 {
+.describe-1,
+.describe-2 {
     display: flex;
     flex-direction: row;
-    height: 400px;
+    height: 450px;
     margin: auto;
     width: 100%;
+    margin-top: 30px
 }
 
 .describe-1-right-element,
 .describe-1-left-element {
-    width: 50%;
     position: relative;
-    width: 40%;
+    width: 50%;
+    height: 100%;
+}
+
+.describe-1-right-element::after,
+.describe-2-left-element::after {
+    content: '';
+    height: 2px;
+    background-color: var(--green);
+    width: 50%;
+    top: 0;
+    position: absolute;
+}
+
+.describe-1-right-element::before,
+.describe-2-left-element::before {
+    content: '';
+    height: 50%;
+    background-color: var(--green);
+    width: 2px;
+    top: 0;
+    position: absolute;
+}
+
+.describe-1-left-element::before,
+.describe-2-right-element::before {
+    content: '';
+    height: 50%;
+    background-color: var(--green);
+    width: 2px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.describe-1-left-element::after,
+.describe-2-right-element::after {
+    content: '';
+    height: 2px;
+    background-color: var(--green);
+    width: 50%;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.describe-1-right-element p:first-child {
+    margin-left: 40px;
+}
+
+
+/* ============= Frontend Technologies ============== */
+
+.describe-2-left-element::before,
+.describe-2-left-element::after {
+    left: 0;
+}
+
+.describe-2-left-element::after {
+    width: 25%
+}
+
+.technology-container {
+    height: 100%;
+}
+
+.javascript {
+    background-image: url('../img/svg/logo-javascript.svg');
+}
+
+.python {
+    background-image: url('../img/svg/python.svg');
+}
+
+.react {
+    background-image: url('../img/svg/react-2.svg');
+}
+
+.redux {
+    background-image: url('../img/svg/redux.svg');
+}
+
+.django {
+    background-image: url('../img/svg/django.svg');
+    background-size: 80%;
+}
+
+.bootstrap {
+    background-image: url('../img/svg/bootstrap-4.svg');
+}
+
+.describe-2 {
+    flex-direction: column;
+}
+
+.javascript,
+.python,
+.react,
+.redux,
+.django,
+.bootstrap {
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.describe-2-left-element,
+.describe-2-right-element {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+}
+
+.describe-2-left-element-techonlogy {
+    padding: 0;
+    width: 150px;
+    margin: 10px;
+}
+
+.project-element-bottom__technology {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    margin-top: 50px;
 }
 
 .no-display-768 {
@@ -74,8 +258,6 @@
 .medium-avatar {
     position: relative;
     display: block;
-    height: 400px;
-    width: 100%;
     color: #ffffff;
     background-image: url('../img/Mountain.svg');
     background-size: cover;
@@ -84,4 +266,8 @@
 
 .main-content-wrapper {
     height: 100%;
+}
+
+.footer {
+    margin: auto;
 }
