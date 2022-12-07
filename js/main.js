@@ -15,7 +15,7 @@ const preLoader = document.querySelector('.preloader')
 setTimeout(() => {
     preLoader.classList.add('hidden')
     console.log('KUPA');
-}, 3000)
+}, 6000)
 
 
 

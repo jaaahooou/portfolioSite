@@ -42,6 +42,7 @@
     z-index: 3;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    -o-backdrop-filter: blur(10px);
     overflow-y: hidden;
 }
 
