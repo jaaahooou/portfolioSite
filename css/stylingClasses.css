@@ -23,6 +23,7 @@
 .blur {
     filter: blur(4px);
     -webkit-filter: blur(4px);
+    -o-filter: blur(4px)
 }
 
 .hidden {
