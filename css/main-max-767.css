@@ -76,6 +76,10 @@ body {
     -o-border-radius: 50%;
 }
 
+.technology-container div.project-element-bottom__technology {
+    display: none;
+}
+
 .footer {
     line-height: 2rem;
     height: 30px;
