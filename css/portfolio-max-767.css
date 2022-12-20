@@ -32,6 +32,10 @@
     height: 500px;
 }
 
+.portfolio-wrapper {
+    height: 100%;
+}
+
 .button-wrapper {
     position: relative;
     display: flex;

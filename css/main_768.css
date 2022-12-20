@@ -347,3 +347,11 @@ p.frontend-technologies {
     max-width: 1024px;
     width: 100%;
 }
+
+
+/* ============= Portfolio ============== */
+
+.portfolio-wrapper {
+    display: flex;
+    flex-direction: row;
+}
