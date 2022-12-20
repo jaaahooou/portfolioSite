@@ -112,7 +112,8 @@ body {
 }
 
 .describe-1,
-.describe-2 {
+.describe-2,
+.describe-3 {
     display: flex;
     flex-direction: row;
     height: 450px;
@@ -133,8 +134,7 @@ body {
     margin: 10px;
 }
 
-.describe-1-right-element::after,
-.describe-2-left-element::after {
+.describe-1-right-element::after {
     content: '';
     height: 2px;
     background-color: var(--green);
@@ -148,8 +148,7 @@ body {
     left: -10px
 }
 
-.describe-1-right-element::before,
-.describe-2-left-element::before {
+.describe-1-right-element::before {
     content: '';
     height: 50%;
     background-color: var(--green);
@@ -263,8 +262,10 @@ p.frontend-technologies {
     background-image: url('../img/svg/bootstrap-4.svg');
 }
 
-.describe-2 {
+.describe-2,
+.describe-3 {
     flex-direction: column;
+    border: 1px solid var(--pink)
 }
 
 .javascript,
@@ -284,14 +285,13 @@ p.frontend-technologies {
     justify-content: end;
     width: 100%;
     height: 100%;
-    margin-top: 30px;
 }
 
 .describe-2-left-element-techonlogy {
     padding: 0;
     width: 150px;
     margin: 10px;
-    height: 35vh;
+    height: 70%;
 }
 
 .project-element-bottom__technology {
@@ -323,17 +323,27 @@ p.frontend-technologies {
     margin: auto;
 }
 
-@media screen and (max-width: 884px) and (min-width: 768px) {
+@media screen and (max-width: 1024px) and (min-width: 768px) {
     p.frontend-technologies {
         display: none
     }
     .describe-2-left-element {
-        justify-content: flex-start;
-        margin-left: 30px;
+        justify-content: center;
     }
 }
 
 .describe {
     max-width: 1024px;
     margin: auto;
+    top: 50%;
+    transform: translate(0, -60%);
+    -webkit-transform: translate(0, -60%);
+    -moz-transform: translate(0, -60%);
+    -ms-transform: translate(0, -60%);
+    -o-transform: translate(0, -60%);
+}
+
+.main-describe {
+    max-width: 1024px;
+    width: 100%;
 }
