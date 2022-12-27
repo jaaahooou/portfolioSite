@@ -14,8 +14,8 @@ const body = document.querySelector('.body')
 const preLoader = document.querySelector('.preloader')
 setTimeout(() => {
     preLoader.classList.add('hidden')
-    console.log('KUPA');
-}, 6000)
+
+}, 4000)
 
 
 
@@ -164,48 +164,52 @@ const projectElementBottomArray = [...document.querySelectorAll('.project-elemen
 
 
 
-
-projectButtonsArray.forEach((item, index) => {
-
-
-    item.addEventListener('click', () => {
-
-        console.log('active el: ', activeProjectElement)
-        for (let i = 0; i < projectButtonsArray.length; i++) {
-            projectButtonsArray[i].classList.remove('active-project_button')
-            projectButtonsArray[i].classList.remove('project-button-animation')
-                // projectElementsArray[i].classList.add('hidden')
-
-        }
-        item.classList.add('active-project_button')
-        item.classList.add('project-button-animation')
-
-        // projectElementsArray[index].classList.remove('hidden')
-        if (activeProjectElement != index) {
-            setTimeout(() => {
-                projectElementsArray[0].classList.remove('active-project-element')
-                projectElementBottomArray[0].classList.remove('active-project-element__bottom')
-            }, 600)
+if (window.innerWidth < 768) {
+    projectButtonsArray.forEach((item, index) => {
 
 
-            projectElementsArray[activeProjectElement].classList.add('project_element_disappear')
-            projectElementBottomArray[activeProjectElement].classList.add('project_element_bottom_disappear')
+        item.addEventListener('click', () => {
 
-            projectElementsArray[activeProjectElement].classList.remove('project_element_appear')
-            projectElementBottomArray[activeProjectElement].classList.remove('project_element_bottom_appear')
+            console.log('active el: ', activeProjectElement)
+            for (let i = 0; i < projectButtonsArray.length; i++) {
+                projectButtonsArray[i].classList.remove('active-project_button')
+                projectButtonsArray[i].classList.remove('project-button-animation')
+                    // projectElementsArray[i].classList.add('hidden')
 
-            projectElementsArray[index].classList.add('project_element_appear')
-            projectElementBottomArray[index].classList.add('project_element_bottom_appear')
-                // projectElementsArray[index].classList.remove('hidden')
+            }
+            item.classList.add('active-project_button')
+            item.classList.add('project-button-animation')
+
+            // projectElementsArray[index].classList.remove('hidden')
+            if (activeProjectElement != index) {
+                setTimeout(() => {
+                    projectElementsArray[0].classList.remove('active-project-element')
+                    projectElementBottomArray[0].classList.remove('active-project-element__bottom')
+                }, 600)
 
 
-            activeProjectElement = index
-            projectElementBottomArray[activeProjectElement].classList.remove('project_element_bottom_disappear')
-        }
+                projectElementsArray[activeProjectElement].classList.add('project_element_disappear')
+                projectElementBottomArray[activeProjectElement].classList.add('project_element_bottom_disappear')
+
+                projectElementsArray[activeProjectElement].classList.remove('project_element_appear')
+                projectElementBottomArray[activeProjectElement].classList.remove('project_element_bottom_appear')
+
+                projectElementsArray[index].classList.add('project_element_appear')
+                projectElementBottomArray[index].classList.add('project_element_bottom_appear')
+                    // projectElementsArray[index].classList.remove('hidden')
 
 
+                activeProjectElement = index
+                projectElementBottomArray[activeProjectElement].classList.remove('project_element_bottom_disappear')
+            }
+
+
+        })
     })
-})
+
+}
+
+
 
 
 
@@ -230,3 +234,63 @@ headerWrapperMediumElementsArray.forEach((item, index) => {
     })
 
 })
+
+
+
+// ============== Portfolio buttons for width resolutions >= 768px ============
+
+
+console.log(projectButtonsArray);
+
+
+
+
+if (window.innerWidth >= 768) {
+
+    for (let i = 1; i < projectElementsArray.length; i++) {
+
+        projectElementsArray[i].classList.add('hidden')
+        projectElementBottomArray[i].classList.add('hidden')
+    }
+    projectButtonsArray.forEach((item, index) => {
+
+
+        item.addEventListener('click', () => {
+
+            console.log('active el res >= 768: ', activeProjectElement)
+            for (let i = 0; i < projectButtonsArray.length; i++) {
+                projectButtonsArray[i].classList.remove('hidden')
+                projectButtonsArray[i].classList.remove('hidden')
+                    // projectElementsArray[i].classList.add('hidden')
+
+            }
+            item.classList.add('active-project_button')
+            item.classList.add('project-button-animation')
+
+            // projectElementsArray[index].classList.remove('hidden')
+            if (activeProjectElement != index) {
+
+                projectElementsArray[0].classList.add('hidden')
+                projectElementBottomArray[0].classList.add('hidden')
+
+
+
+                projectElementsArray[activeProjectElement].classList.add('hidden')
+                projectElementBottomArray[activeProjectElement].classList.add('hidden')
+
+                projectElementsArray[activeProjectElement].classList.remove('hidden')
+                projectElementBottomArray[activeProjectElement].classList.remove('hidden')
+
+                projectElementsArray[index].classList.add('hidden')
+                projectElementBottomArray[index].classList.add('hidden')
+                    // projectElementsArray[index].classList.remove('hidden')
+
+
+                activeProjectElement = index
+                projectElementBottomArray[activeProjectElement].classList.remove('project_element_bottom_disappear')
+            }
+
+
+        })
+    })
+}
