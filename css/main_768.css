@@ -20,7 +20,7 @@
         --lightest-slate: #ccd6f6;
         --white: #e6f1ff;
         --green: #64ffda;
-        --green-tint: rgba(100, 255, 218, 0.1);
+        --green-tint: #64ffda1a;
         --pink: rgb(245, 125, 255);
         --blue: #57cbff;
     }
@@ -263,7 +263,6 @@
     .describe-2,
     .describe-3 {
         flex-direction: column;
-        border: 1px solid var(--pink)
     }
     
     .javascript,
@@ -294,10 +293,10 @@
     
     .project-element-bottom__technology {
         position: relative;
-        height: 150px;
-        width: 150px;
+        height: 60px;
+        width: 60px;
         margin: 10px;
-        margin-top: 50px;
+        /* margin-top: 50px; */
     }
     
     .no-display-768 {
@@ -319,6 +318,14 @@
     
     .footer {
         margin: auto;
+        bottom: 20px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
     }
     
     @media screen and (max-width: 1024px) and (min-width: 768px) {
@@ -349,6 +356,12 @@
     
     .portfolio-projects {
         height: calc(100vh - 72px - 20px);
+        margin: auto;
+        max-width: 1024px;
+    }
+    
+    .project_element {
+        height: 40vh;
     }
     
     .portfolio-wrapper {
@@ -363,13 +376,16 @@
     .button-wrapper {
         display: flex;
         flex-direction: column;
-        width: 30%;
+        width: 85px;
         justify-content: stretch;
         margin-right: 10px;
     }
     
     .project-element__bottom {
         display: flex;
+        position: absolute;
+        display: flex;
+        bottom: -50vh;
     }
     
     .commerce-bg {
@@ -389,8 +405,27 @@
     }
     
     .top-left-container {
-        height: 30vh;
+        position: absolute;
+        top: -100vh;
+        height: 40vh;
         width: 60vw;
+        max-width: 600px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+    
+    .top-right-container {
+        position: absolute;
+        top: 60px;
+        width: 300px;
+        right: -100vw;
+        background-color: whitesmoke;
+        border-radius: 5px;
     }
     
     .project_button {
@@ -427,11 +462,137 @@
     }
     
     .project-elements-wrapper {
+        height: 60vh;
+        width: 80vw;
         position: relative;
         top: 50%;
-        transform: translate(0, -37.5%);
-        -webkit-transform: translate(0, -37.5%);
-        -moz-transform: translate(0, -37.5%);
-        -ms-transform: translate(0, -37.5%);
-        -o-transform: translate(0, -37.5%);
+        max-width: 900px;
+        transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+        -moz-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        -o-transform: translate(0, -50%);
+    }
+    /* ================  Project content animations ================= */
+    
+    .topRightContainerDisappear {
+        animation: topRightContainerDisappear 0.5s;
+        -webkit-animation: topRightContainerDisappear 0.5s;
+        animation-fill-mode: forwards;
+    }
+    
+    .topRightContainerAppear {
+        animation: topRightContainerAppear 0.5s;
+        -webkit-animation: topRightContainerAppear 0.5s;
+        animation-fill-mode: forwards;
+    }
+    
+    .topLeftContainerAppear {
+        animation: topLeftContainerAppear 0.5s;
+        -webkit-animation: topLeftContainerAppear 0.5s;
+        animation-fill-mode: forwards;
+    }
+    
+    .topLeftContainerDisappear {
+        animation: topLeftContainerDisappear 0.5s;
+        -webkit-animation: topLeftContainerDisappear 0.5s;
+        animation-fill-mode: forwards;
+    }
+    
+    .technologyWrapperAppear {
+        animation: technologyWrapperAppear 0.5s;
+        -webkit-animation: technologyWrapperAppear 0.5s;
+        animation-fill-mode: forwards;
+    }
+    
+    .technologyWrapperDisappear {
+        animation: technologyWrapperDisappear 0.5s;
+        -webkit-animation: technologyWrapperDisappear 0.5s;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes topRightContainerDisappear {
+        0% {
+            right: 30px
+        }
+        100% {
+            right: -100vw;
+        }
+    }
+    
+    @keyframes topRightContainerAppear {
+        0% {
+            right: -100vw
+        }
+        100% {
+            right: 30px;
+        }
+    }
+    
+    @keyframes topLeftContainerAppear {
+        0% {
+            top: -100vh
+        }
+        100% {
+            top: 0;
+        }
+    }
+    
+    @keyframes topLeftContainerDisappear {
+        0% {
+            top: 0;
+        }
+        100% {
+            top: -100vh;
+        }
+    }
+    
+    @keyframes technologyWrapperAppear {
+        0% {
+            bottom: -50vh
+        }
+        100% {
+            bottom: 0
+        }
+    }
+    
+    @keyframes technologyWrapperDisappear {
+        0% {
+            bottom: 0
+        }
+        100% {
+            bottom: -50vh
+        }
+    }
+    /* ========= MENU ========== */
+    
+    .envelope-medium:hover {
+        cursor: pointer;
+    }
+    
+    .openBigMenu {
+        animation: openBigMenu 0.5s;
+        -webkit-animation: openBigMenu 0.5s;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes openBigMenu {
+        0% {
+            width: 0
+        }
+        100% {
+            width: 90vw;
+        }
+    }
+    
+    .contact {
+        position: fixed;
+        max-width: 768px;
+        margin: auto;
+        left: 50%;
+        transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
     }

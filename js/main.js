@@ -7,8 +7,10 @@ const menuWrapper = document.querySelector('.menu-wrapper')
 const envelopeMenuElement = document.querySelector('.envelope')
 const contactELement = document.querySelector('.contact')
 const sendMessageButton = document.querySelector('.send-message')
+const closeMessageButton = document.querySelector('.close-message')
 const headerWrapper = document.querySelector('.header-wrapper')
 const body = document.querySelector('.body')
+const headerWrapperMedium = document.querySelector('.header-wrapper-medium')
 
 
 const preLoader = document.querySelector('.preloader')
@@ -141,10 +143,12 @@ function sendMessageFrontendEvents() {
     contactELement.classList.add('hidden')
     headerWrapper.classList.remove('blur')
     contentWrapper.classList.remove('blur')
+    headerWrapperMedium.classList.remove('blur')
     burgerMenuButton.style.pointerEvents = ""
 }
 
 sendMessageButton.addEventListener('click', sendMessageFrontendEvents)
+closeMessageButton.addEventListener('click', sendMessageFrontendEvents)
 
 
 
@@ -170,17 +174,16 @@ if (window.innerWidth < 768) {
 
         item.addEventListener('click', () => {
 
-            console.log('active el: ', activeProjectElement)
+
             for (let i = 0; i < projectButtonsArray.length; i++) {
                 projectButtonsArray[i].classList.remove('active-project_button')
                 projectButtonsArray[i].classList.remove('project-button-animation')
-                    // projectElementsArray[i].classList.add('hidden')
 
             }
             item.classList.add('active-project_button')
             item.classList.add('project-button-animation')
 
-            // projectElementsArray[index].classList.remove('hidden')
+
             if (activeProjectElement != index) {
                 setTimeout(() => {
                     projectElementsArray[0].classList.remove('active-project-element')
@@ -213,84 +216,143 @@ if (window.innerWidth < 768) {
 
 
 
-// ============== Menu elements for width resolutions >= 768px ============
-
-const headerWrapperMediumElementsArray = [...document.querySelectorAll('.header-wrapper-medium-element')]
-const mediumContentElementsArray = [...document.querySelectorAll('.medium-content-element')]
-let activeMediumContentElement = 0
-
-headerWrapperMediumElementsArray.forEach((item, index) => {
-    item.addEventListener('click', () => {
-        console.log("menu el index: ", index);
-
-
-        for (let i = 0; i < mediumContentElementsArray.length; i++) {
-            if (!mediumContentElementsArray[i].classList.contains('no-display-768')) {
-                mediumContentElementsArray[i].classList.add('no-display-768')
-            }
-
-        }
-        mediumContentElementsArray[index].classList.remove('no-display-768')
-    })
-
-})
 
 
 
-// ============== Portfolio buttons for width resolutions >= 768px ============
-
-
-console.log(projectButtonsArray);
 
 
 
 
 if (window.innerWidth >= 768) {
 
+    // ============== Menu elements for width resolutions >= 768px ============
+
+    const headerWrapperMediumElementsArray = [...document.querySelectorAll('.header-wrapper-medium-element')]
+    const mediumContentElementsArray = [...document.querySelectorAll('.medium-content-element')]
+    const topLeftContainerArray = [...document.querySelectorAll('.top-left-container')]
+    let activeMediumContentElement = 0
+
+    headerWrapperMediumElementsArray.forEach((item, index) => {
+        item.addEventListener('click', () => {
+
+
+
+            for (let i = 0; i < mediumContentElementsArray.length; i++) {
+                if (!mediumContentElementsArray[i].classList.contains('no-display-768')) {
+                    mediumContentElementsArray[i].classList.add('no-display-768')
+                }
+
+            }
+            mediumContentElementsArray[index].classList.remove('no-display-768')
+        })
+
+    })
+
+
+
+
+    let headerWrapperMediumElementsArrayWasClicked = false
+
+    const topRightContainerArr = [...document.querySelectorAll('.top-right-container')]
+    const projectBottomElementArr = [...document.querySelectorAll('.project-element-bottom__technology')]
+    const projectTechnologyWrapperArr = [...document.querySelectorAll('.project-element__bottom')]
+
+
+
+    const activeBottomElement = document.querySelector('.active-project-element__bottom')
+    const activeTechnologyElements = [...activeBottomElement.querySelectorAll('.project-element-bottom__technology')]
+
+
+    headerWrapperMediumElementsArray[4].addEventListener('click', () => {
+        console.log(headerWrapperMediumElementsArrayWasClicked);
+        if (headerWrapperMediumElementsArrayWasClicked == false) {
+
+            headerWrapperMediumElementsArrayWasClicked = true
+            topRightContainerArr[0].classList.add('topRightContainerAppear')
+            topLeftContainerArray[0].classList.add('topLeftContainerAppear')
+            projectTechnologyWrapperArr[0].classList.add('technologyWrapperAppear')
+
+        }
+
+    })
+
     for (let i = 1; i < projectElementsArray.length; i++) {
 
-        projectElementsArray[i].classList.add('hidden')
-        projectElementBottomArray[i].classList.add('hidden')
     }
     projectButtonsArray.forEach((item, index) => {
 
 
         item.addEventListener('click', () => {
 
-            console.log('active el res >= 768: ', activeProjectElement)
-            for (let i = 0; i < projectButtonsArray.length; i++) {
-                projectButtonsArray[i].classList.remove('hidden')
-                projectButtonsArray[i].classList.remove('hidden')
-                    // projectElementsArray[i].classList.add('hidden')
+            // ========== Create new 'active technology elements array =========
+            const activeBottomElement = document.querySelector('.active-project-element__bottom')
+            const activeTechnologyElements = [...activeBottomElement.querySelectorAll('.project-element-bottom__technology')]
 
+
+
+            for (let i = 0; i < topRightContainerArr.length; i++) {
+
+                // ========== Reset Elements =========
+
+                topRightContainerArr[i].classList.remove('topRightContainerDisappear')
+                topRightContainerArr[i].classList.remove('topRightContainerAppear')
+
+                topLeftContainerArray[i].classList.remove('topLeftContainerDisappear')
+                topLeftContainerArray[i].classList.remove('topLeftContainerAppear')
+
+                projectTechnologyWrapperArr[i].classList.remove('active-project-element__bottom')
+
+                projectTechnologyWrapperArr[i].classList.remove('technologyWrapperAppear')
+                projectTechnologyWrapperArr[i].classList.remove('technologyWrapperDisappear')
             }
-            item.classList.add('active-project_button')
-            item.classList.add('project-button-animation')
 
-            // projectElementsArray[index].classList.remove('hidden')
+
             if (activeProjectElement != index) {
 
-                projectElementsArray[0].classList.add('hidden')
-                projectElementBottomArray[0].classList.add('hidden')
+                topRightContainerArr[activeProjectElement].classList.add('topRightContainerDisappear')
+                topRightContainerArr[activeProjectElement].classList.remove('topRightContainerAppear')
 
+                topLeftContainerArray[activeProjectElement].classList.add('topLeftContainerDisappear')
+                topLeftContainerArray[activeProjectElement].classList.remove('topLeftContainerAppear')
 
+                projectTechnologyWrapperArr[activeProjectElement].classList.add('active-project-element__bottom')
 
-                projectElementsArray[activeProjectElement].classList.add('hidden')
-                projectElementBottomArray[activeProjectElement].classList.add('hidden')
+                projectTechnologyWrapperArr[activeProjectElement].classList.add('technologyWrapperDisappear')
+                projectTechnologyWrapperArr[activeProjectElement].classList.remove('technologyWrapperAppear')
 
-                projectElementsArray[activeProjectElement].classList.remove('hidden')
-                projectElementBottomArray[activeProjectElement].classList.remove('hidden')
-
-                projectElementsArray[index].classList.add('hidden')
-                projectElementBottomArray[index].classList.add('hidden')
-                    // projectElementsArray[index].classList.remove('hidden')
-
-
-                activeProjectElement = index
-                projectElementBottomArray[activeProjectElement].classList.remove('project_element_bottom_disappear')
             }
+
+
+
+            setTimeout(() => {
+                topRightContainerArr[index].classList.add('topRightContainerAppear')
+                topLeftContainerArray[index].classList.add('topLeftContainerAppear')
+                projectTechnologyWrapperArr[index].classList.add('technologyWrapperAppear')
+            }, 500)
+
+            activeProjectElement = index
+
+
 
 
         })
     })
+
+
+    // ========== Menu =========
+    const envelope = document.querySelector('.envelope-medium');
+
+    console.log(envelope);
+
+
+    envelope.addEventListener('click', () => {
+        console.log('dupsko');
+        contactELement.classList.remove('hidden')
+        contactELement.classList.add('openBigMenu')
+        contentWrapper.classList.add('blur')
+        headerWrapperMedium.classList.add('blur')
+    })
+
+
+
 }

@@ -42,6 +42,10 @@
     padding-left: 20px;
 }
 
+.header-wrapper-medium-element:hover {
+    cursor: pointer
+}
+
 .header-wrapper-medium-element-first {
     width: 5vw;
 }
